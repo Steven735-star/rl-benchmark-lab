@@ -22,9 +22,8 @@
 \renewcommand{\arraystretch}{1.08}
 \title{\vspace{-1.35cm}\bfseries A Reproducible Comparison of Tabular Q-Learning, DQN, and Double DQN on Gymnasium Classic Control Environments\\[3pt]
 \large Experimental Study and Failure-Mode Analysis}
-\author{\textbf{[Student 1]} \quad \textbf{[Student 2]}\\
-\small Intelligent Agents --- Project 01 \quad | \quad October 2026\\[-5pt]
-\small \textcolor{red!65!black}{\textbf{Working draft: verify authorship, references, and presentation before submission}}}
+\author{\textbf{Kevin Erazo} \quad \textbf{Steven Rodríguez}\\
+\small Intelligent Agents --- Project 01 \quad | \quad October 2026}
 \date{}
 \begin{document}
 \maketitle
@@ -199,9 +198,9 @@ Taken together, these examples show that algorithm choice depends jointly on obs
 The project achieved the planned comparisons and stored reproducible traces for 33 training runs, yet no configuration reached its project-specific final threshold in every seed. On CartPole, DQN exhibited promising early sample efficiency but weaker terminal performance than the two finer tabular alternatives. On Acrobot, lower DQN learning rate and Double DQN improved the average outcome under some conditions, without establishing robust multi-seed success. The target-network ablation failed in all terminal evaluations. Such negative and mixed results are informative when supported by raw logs and explicit statistical limitations. Future experiments should focus on retention of good policies, better monitoring of learning dynamics, and separate validation versus test evaluations.
 
 \section*{Reproducibility and AI-use statement}
-All numerical results are calculated from the supplied experiment archives. Reproduction commands from the repository include \texttt{python -m scripts.run\_experiments --suite tier1}, \texttt{--suite tier2}, and \texttt{--suite tier3}, followed by \texttt{python -m scripts.plot\_results --suite all}. Default seed list is \texttt{0 1 2}; results are saved to \texttt{results/full}. Exact software versions, network settings, checkpoint names, and evaluation logs appear in each run's JSON summary. The distributed ZIP also contains two real-environment agent GIFs.
+All numerical results are calculated from the supplied experiment archives. Reproduction commands from the repository include \texttt{python -m scripts.run\_experiments --suite tier1}, \texttt{--suite tier2}, and \texttt{--suite tier3}, followed by \texttt{python -m scripts.plot\_results --suite all}. Default seed list is \texttt{0 1 2}; results are saved to \texttt{results/full}. Exact software versions, network settings, checkpoint names, and evaluation logs appear in each run's JSON summary. The public repository also contains the complete per-run metrics, saved checkpoints, figures, and two real-environment agent GIFs (\url{https://github.com/Steven735-star/rl-benchmark-lab}).
 
-OpenAI ChatGPT assisted with planning, Python/PyTorch implementation, testing, experiment interpretation, visualization, and report drafting. The human team executed the Gymnasium experiments and supplied the measured logs. Both students must verify all reported claims, citations, and numerical summaries; understand and defend the code and figures; and include the most material prompts in the submission appendix. \textbf{This article is a draft pending author review and course-format verification.}
+OpenAI ChatGPT assisted with planning, Python/PyTorch implementation, testing, experiment interpretation, visualization, and report drafting. The human team executed the Gymnasium experiments and supplied the measured logs. Both students must verify all reported claims, citations, and numerical summaries; understand and defend the code and figures; and review the representative reconstructed prompts presented in Appendix A. The reconstructed wording should be replaced by original transcripts wherever available.
 
 \begin{thebibliography}{12}\footnotesize
 \bibitem{sutton2018} R. S. Sutton and A. G. Barto. \emph{Reinforcement Learning: An Introduction}, 2nd ed. MIT Press, 2018.
@@ -219,4 +218,18 @@ OpenAI ChatGPT assisted with planning, Python/PyTorch implementation, testing, e
 \bibitem{td32018} S. Fujimoto, H. van Hoof, and D. Meger. Addressing function approximation error in actor-critic methods. \emph{ICML}, 2018.
 \bibitem{aledocs} Farama Foundation. Arcade Learning Environment, Pong. \url{https://ale.farama.org/environments/pong/}.
 \end{thebibliography}
+
+\section*{Appendix A: Representative Generative-AI Prompts}
+\noindent\textit{Disclosure note.} The following prompts are reconstructed examples of the main requests corresponding to the AI-assisted tasks disclosed above. They are not verbatim transcripts, and their precise wording has not been independently verified. The team should replace any entry with the original prompt if the conversation record is available.
+\begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\item \textbf{Experimental design:} ``Propose a reproducible comparison of tabular Q-learning and DQN on CartPole-v1 and a DQN sensitivity study on Acrobot-v1. Use three independent seeds, fixed environment-step budgets, and separate training from greedy evaluation.''
+\item \textbf{Tabular agent:} ``Implement tabular Q-learning for CartPole-v1 in Python and NumPy with 6, 10, and 20 bins per observation dimension, epsilon-greedy exploration, and explicit treatment of termination versus time-limit truncation.''
+\item \textbf{Deep RL agents:} ``Implement DQN and Double DQN directly in PyTorch, including a replay buffer, target network, epsilon schedule, Huber loss, gradient clipping, and an ablation that disables the target network. Do not use prebuilt RL agents.''
+\item \textbf{Experimental pipeline:} ``Create command-line scripts to run the defined configurations for seeds 0, 1, and 2; log per-episode returns, ten-episode greedy checkpoints, final 100-episode evaluations, hyperparameters, elapsed time, and saved models.''
+\item \textbf{Analysis and visualization:} ``Aggregate measured results across seeds using sample standard deviation. Plot learning curves versus environment steps with uncertainty bands, compare final returns and training time, and do not fabricate missing measurements.''
+\item \textbf{Scientific interpretation and writing:} ``Help organize a concise double-column report discussing sample efficiency, discretization, hyperparameter sensitivity, the target-network ablation, and Double DQN. Explain negative results and limitations without claiming unsupported convergence or causal mechanisms.''
+\end{enumerate}
+
 \end{document}
