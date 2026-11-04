@@ -1,0 +1,16 @@
+{
+  "suite": "tier2",
+  "seeds": [
+    0
+  ],
+  "note": "This file lists runs launched in this invocation, not historical runs.",
+  "runs": [
+    "acrobot_dqn_default_seed0",
+    "acrobot_lr_0p0001_seed0",
+    "acrobot_lr_0p001_seed0",
+    "acrobot_eps_0p2_seed0",
+    "acrobot_eps_0p8_seed0",
+    "acrobot_no_target_seed0"
+  ],
+  "gymnasium_version": "1.4.0"
+}

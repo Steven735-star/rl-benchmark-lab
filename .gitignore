@@ -1,0 +1,66 @@
+# =====================================
+# RL BENCHMARK LAB - ROOT GITIGNORE
+# =====================================
+
+# Compressed archives and backups
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+
+# Editors and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.nav
+*.snm
+
+# Temporary experiment outputs
+**/results/**/tmp/
+**/results/**/cache/
+**/results/**/temporary/
+
+# TensorBoard temporary logs
+events.out.tfevents.*
+
+# Temporary data
+*.tmp
+*.bak
+*.temp
