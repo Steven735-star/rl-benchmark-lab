@@ -1,0 +1,15 @@
+{
+  "suite": "tier3",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "note": "This file lists runs launched in this invocation, not historical runs.",
+  "runs": [
+    "acrobot_double_dqn_seed0",
+    "acrobot_double_dqn_seed1",
+    "acrobot_double_dqn_seed2"
+  ],
+  "gymnasium_version": "1.4.0"
+}

@@ -3,7 +3,6 @@ __pycache__/
 *.py[cod]
 .venv/
 .env
-results/full/
 results/smoke/
 *.egg-info/
 .DS_Store

@@ -1,0 +1,13 @@
+env_steps,kind,mean_return,std_return,evaluation_episodes
+0,periodic,-500.0,0.0,10
+10000,periodic,-490.5,30.041637771599603,10
+20000,periodic,-318.9,131.9818590227881,10
+30000,periodic,-500.0,0.0,10
+40000,periodic,-500.0,0.0,10
+50000,periodic,-500.0,0.0,10
+60000,periodic,-500.0,0.0,10
+70000,periodic,-500.0,0.0,10
+80000,periodic,-500.0,0.0,10
+90000,periodic,-110.3,11.832629087025042,10
+100000,periodic,-500.0,0.0,10
+100000,final,-500.0,0.0,100

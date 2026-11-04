@@ -1,0 +1,8 @@
+experiment,seed_count,final_100ep_return_mean_across_seeds,final_100ep_return_sd_across_seeds,wall_clock_seconds_mean,first_provisional_threshold_steps_per_seed,final_100ep_threshold_pass_count
+acrobot_double_dqn,3,-269.37666666666667,208.3786746126708,41.241465372333245,"[100000, 60000, null]",1
+acrobot_dqn_default,3,-371.05,223.3479516360067,39.33928018400017,"[100000, 70000, null]",0
+acrobot_eps_0p2,3,-500.0,0.0,41.72406434000004,"[null, null, null]",0
+acrobot_eps_0p8,3,-361.7166666666667,239.51375917331626,38.54307837600012,"[70000, 20000, 100000]",1
+acrobot_lr_0p0001,3,-254.25,217.54873959644078,36.59878018499982,"[null, 80000, 90000]",1
+acrobot_lr_0p001,3,-373.03999999999996,219.90117052894465,40.72613747533311,"[null, null, null]",0
+acrobot_no_target,3,-500.0,0.0,41.07029670633316,"[80000, null, null]",0

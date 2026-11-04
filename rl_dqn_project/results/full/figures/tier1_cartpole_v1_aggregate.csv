@@ -1,0 +1,5 @@
+experiment,seed_count,final_100ep_return_mean_across_seeds,final_100ep_return_sd_across_seeds,wall_clock_seconds_mean,first_provisional_threshold_steps_per_seed,final_100ep_threshold_pass_count
+cartpole_dqn,3,117.46333333333332,34.45377966687159,59.73832711266672,"[null, null, null]",0
+cartpole_tabular_10bins,3,275.68,193.52412666125122,23.868406314333242,"[null, 170000, null]",1
+cartpole_tabular_20bins,3,280.8666666666667,127.95576045389019,24.042480359666722,"[null, null, null]",0
+cartpole_tabular_6bins,3,161.79666666666665,37.77653548611006,23.096502100333208,"[null, null, null]",0
