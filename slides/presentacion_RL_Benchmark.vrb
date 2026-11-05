@@ -1,0 +1,21 @@
+\frametitle{Cómo reproducir el proyecto desde GitHub}
+\begin{info}
+\footnotesize\ttfamily
+\$ git clone https://github.com/Steven735-star/rl-benchmark-lab.git\\
+\$ cd rl-benchmark-lab/rl\_dqn\_project\\
+\$ python -m venv .venv\\
+\$ source .venv/bin/activate\\
+\$ pip install -r requirements.txt\\
+\$ python -m pytest -q
+\end{info}
+\vspace{.18cm}
+\begin{info}
+\textbf{Regenerar las curvas usando resultados ya publicados (sin entrenamiento):}\par\vspace{.08cm}
+\small\ttfamily\$ python -m scripts.plot\_results --results-dir results/full --suite all
+\end{info}
+\vspace{.18cm}
+\begin{info}
+\textbf{Repetir todos los entrenamientos (opcional; costoso):}\par\vspace{.08cm}
+\small\ttfamily\$ python -m scripts.run\_experiments --suite all --results-dir results/full
+\end{info}
+\noteitem{El proyecto contiene además los resultados finales y modelos, por lo que no es necesario entrenar de nuevo para inspeccionar las evidencias.}
